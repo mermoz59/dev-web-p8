@@ -61,7 +61,7 @@ const Hero = () => {
         )}
         </button>
       </article>
-      <MdKeyboardDoubleArrowDown className={`${scrolled ? "hidden" : ""} w-10 h-10 absolute bottom-5 left-[48%] cursor-pointer`}/>
+      <MdKeyboardDoubleArrowDown className={`${scrolled ? "hidden" : ""} w-10 h-10 absolute bottom-5 left-[48%] cursor-pointer xs:hidden`}/>
     </section>
   )
 }
