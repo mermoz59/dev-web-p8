@@ -34,10 +34,6 @@ const NavBarMobile = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeNav]);
-
-  const handleSectionRef = (ref, index) => {
-    sectionRefs.current[index] = ref;
-  };  
     
     return (
       <section className={`fixed bottom-5 flex justify-center w-full z-10 duration-75 xm:hidden ${isScrolledToBottom ? 'hidden' : ''}`}>
