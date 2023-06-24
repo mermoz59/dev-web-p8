@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import Frflag from '../assets/frflag.png'
 import Enflag from '../assets/enflag.png'
-
 const Hero = () => {
 
 
@@ -30,6 +29,10 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noreferrer');
+  };
+
   return (
     <section className='flex flex-col p-10 h-screen relative bg-gradient-to-b from-slate-900'>
       <div className='text-9xl pt-40 pb-28 flex justify-center xs:text-8xl' id='gradientcolor'>
@@ -53,8 +56,8 @@ const Hero = () => {
         <button className='border-2 rounded-lg h-40 xs:h-28 w-1/4 xs:w-1/2 flex justify-center items-center border-teal-300' onClick={handleButtonClick}>
         {showContent ? (
           <div className='flex space-x-10 xxs:space-x-5'>
-            <Link to="https://github.com/mermoz59"><img src={Frflag} alt="Drapeau de la France" className='w-14 xxs:w-10'/></Link>
-            <Link to="https://github.com/mermoz59"><img src={Enflag} alt="Drapeau du Royaume-uni" className='w-14 xxs:w-10'/></Link>
+            <Link role='link' onClick={() => openInNewTab('https://drive.google.com/file/d/1iFdukZj28SCR9FKtLsne-p4FG-J9Oq5-/view')}><img src={Frflag} alt="Drapeau de la France" className='w-14 xxs:w-10'/></Link>
+            <Link role='link' onClick={() => openInNewTab('https://drive.google.com/file/d/1YQOHhFXodsrc_Q-PmJSiQWZiliJSudK3/view?usp=sharing')}><img src={Enflag} alt="Drapeau du Royaume-uni" className='w-14 xxs:w-10'/></Link>
           </div>
         ) : (
           <p className='text-3xl text-teal-300 font-bold p-5 xs:text-xl'><span className='xxs:hidden'>Télécharger mon</span> CV</p>
