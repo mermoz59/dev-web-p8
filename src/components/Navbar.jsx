@@ -41,6 +41,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noreferrer');
+  };
+
 
   return (
     <nav className={`'z-10 bg-black flex justify-between p-10 fixed w-full z-10 ${
@@ -74,12 +78,12 @@ const Navbar = () => {
       </ul>
       <ul className="flex space-x-10 xm:hidden">
         <li>
-          <Link to="https://github.com/mermoz59">
+          <Link role="link" onClick={() => openInNewTab('https://www.github.com/mermoz59/')}>
             <img src={github} alt="Logo de Github" className="h-8 w-8 xxs:h-7 xxs:w-7"/>
           </Link>
         </li>
         <li>
-          <Link to="https://www.linkedin.com/in/amine-touba-0b8a3627b/">
+        <Link role="link" onClick={() => openInNewTab('https://www.linkedin.com/in/mohamed-amine-touba-0b8a3627b/')}>
             <img src={linkedinwhite} alt="Logo de Github" className="h-8 w-8 xxs:h-7 xxs:w-7"/>
           </Link>
         </li>
