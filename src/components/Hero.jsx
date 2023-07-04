@@ -3,8 +3,8 @@ import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
-import Frflag from '../assets/frflag.png'
-import Enflag from '../assets/enflag.png'
+import Frflag from '../assets/frflag.webp'
+import Enflag from '../assets/enflag.webp'
 const Hero = () => {
 
 

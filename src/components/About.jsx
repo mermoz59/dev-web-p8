@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import Tilt from 'react-parallax-tilt';
-import logoReact from '../assets/tech/reactjs.png'
-import logoNode from '../assets/tech/nodejs.png'
-import logoDev from '../assets/tech/logodev.png'
-import logoAgile from '../assets/tech/logoagile.png'
+import logoReact from '../assets/tech/reactjs.webp'
+import logoNode from '../assets/tech/nodejs.webp'
+import logoDev from '../assets/tech/logodev.webp'
+import logoAgile from '../assets/tech/logoagile.webp'
 
 
 const About = () => {

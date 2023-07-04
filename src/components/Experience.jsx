@@ -5,7 +5,7 @@ import Experiencec from "./ExperienceCard";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { experiences } from "../constants";
 
-import logooc from '../assets/occlient/logooc.jpg'
+import logooc from '../assets/occlient/logooc.webp'
 
 
 const Experience = () => {
