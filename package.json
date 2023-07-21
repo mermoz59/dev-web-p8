@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build-prod": "vite --mode prod build",
     "build": "vite build",
     "deploy": "gh-pages -d dist",
     "deploy:live": "npm run build && aws s3 sync dist/ s3://<YOUR_S3_BUCKET_NAME> --delete && npm run-script invalidate-cache:live",
