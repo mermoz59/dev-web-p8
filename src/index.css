@@ -36,6 +36,11 @@ background: -webkit-linear-gradient(0deg, #000000 15%, #5eead4 100%);
   background-color: rgb(2, 6, 23);
   color: rgb(94 234 212);
 }
+
+.buttonlanguage button.active {
+  color: white;
+}
+
 @media (max-width: 1300px) {
   .aboutcard {
     flex-wrap: wrap;

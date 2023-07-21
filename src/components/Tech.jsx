@@ -4,12 +4,17 @@ import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import MarqueeCards from "./MarqueeCards";
 
+import { useTranslation } from "react-i18next";
+
 const Tech = () => {
+
+  const { t } = useTranslation();
+
   return (
     <section className="p-10 mt-10 w-full">
       <motion.div variants={textVariant()}>
-        <span className='text-xl text-slate-500'>MES POINTS FORTS</span>
-        <h1 className='text-6xl mt-5 mb-20 xxs:text-5xl xxs:flex xxs:justify-center'>Compétences.</h1>
+        <span className='text-xl text-slate-500'>{t('subtitletech')}</span>
+        <h1 className='text-6xl mt-5 mb-20 xxs:text-5xl xxs:flex xxs:justify-center'>{t('titletech')}</h1>
       </motion.div>
       <div className="xl:border-l-2 xl:border-r-2 h-full">
           <div className="relative">
