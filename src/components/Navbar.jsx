@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 
+import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 
 import logo from '../assets/logo.svg'
 import { github, linkedinwhite } from "../assets"
@@ -8,23 +10,26 @@ import { github, linkedinwhite } from "../assets"
 
 const Navbar = () => {
 
+  const { t } = useTranslation();
+
   const navLinks = [
     {
       id: "about",
-      title: "À propos",
+      title: t('about'),
     },
     {
       id: "experience",
-      title: "Expériences",
+      title: t('work'),
     },
     {
       id: "contact",
-      title: "Contactez-moi",
+      title: t('contact'),
     },
   ];
 
   const [active, setActive] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [activeNav, setActiveNav] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,22 +65,29 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className='h-6 w-6' />
-          <h1>Amine <span className="xxs:hidden">| Développeur Web</span></h1>
+          <h1>Amine <span className="xxs:hidden">| {t('titlenav')}</span></h1>
         </Link>
       </div>
-      <ul className='flex space-x-5 cursor-pointer xs:hidden'>
-        {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-        ))}
-      </ul>
+      <div className="flex items-center">
+        <div className="xs:mr-0 mr-20 buttonlanguage">
+          <button className={`text-xl text-secondary ${activeNav === '' ? "active" : ""}`} onClick={() => {i18next.changeLanguage('fr'); setActiveNav('')}}>FR</button>
+          <span className="text-xl"> | </span>
+          <button className={`text-xl text-secondary ${activeNav === 'en' ? "active" : ""}`} onClick={() => {i18next.changeLanguage('en'); setActiveNav('en')}}>EN</button>
+        </div>
+        <ul className='flex space-x-5 cursor-pointer xs:hidden min-w-[400px]'>
+          {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+          ))}
+        </ul>
+      </div>
       <ul className="flex space-x-10 xm:hidden">
         <li>
           <Link role="link" onClick={() => openInNewTab('https://www.github.com/mermoz59/')}>

@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 
+import { useTranslation } from "react-i18next";
+
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import Frflag from '../assets/frflag.webp'
 import Enflag from '../assets/enflag.webp'
 const Hero = () => {
 
+  const { t } = useTranslation();
 
   const [scrolled, setScrolled] = useState(false);
   const [showContent, setShowContent] = useState(false);
@@ -49,7 +52,7 @@ const Hero = () => {
           Mohamed-Amine Touba,
         </span>
         <span className='text-3xl'>
-          Développeur Web Full-Stack React
+        {t('titlehero')}
         </span>
       </div>
       <article className='flex flex-row justify-between p-[5%] space-x-5 relative'>
@@ -60,7 +63,7 @@ const Hero = () => {
             <Link role='link' onClick={() => openInNewTab('https://drive.google.com/file/d/1YQOHhFXodsrc_Q-PmJSiQWZiliJSudK3/view?usp=sharing')}><img src={Enflag} alt="Drapeau du Royaume-uni" className='w-14 xxs:w-10'/></Link>
           </div>
         ) : (
-          <p className='text-3xl text-teal-300 font-bold p-5 xs:text-xl'><span className='xxs:hidden'>Télécharger mon</span> CV</p>
+          <p className='text-3xl text-teal-300 font-bold p-5 xs:text-xl'><span className='xxs:hidden'>{t('buttonhero')}</span> CV</p>
         )}
         </button>
       </article>

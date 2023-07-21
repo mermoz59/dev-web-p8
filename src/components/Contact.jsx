@@ -3,11 +3,16 @@ import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import AlertTitle from '@mui/material/AlertTitle';
 
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
+
+  const { t } = useTranslation();
 
   const form = useRef();
 
@@ -53,20 +58,20 @@ const Contact = () => {
   return (
     <section className="p-10 mt-10 w-full">
       <motion.div variants={textVariant()}>
-        <span className='text-xl text-slate-500'>BESOIN DE PLUS ?</span>
-        <h1 className='text-6xl mt-5 mb-20'>Contactez-moi.</h1>
+        <span className='text-xl text-slate-500'>{t('subtitlecontact')}</span>
+        <h1 className='text-6xl mt-5 mb-20'>{t('titlecontact')}</h1>
       </motion.div>
       <div className='flex flex-col'>
         <div className='w-full h-auto flex justify-center'>
           <form ref={form} onSubmit={sendEmail} className='flex flex-col bg-slate-900 h-[800px] w-1/2 xs:w-full rounded-xl p-10 items-between'>
-            <label className='mb-1'>Nom</label>
+            <label className='mb-1'>{t('nameform')}</label>
             <input type="text" name="user_name" className='mb-5 h-[70px] rounded-lg p-2 bg-slate-950' />
             <label className='mb-1'>Email</label>
             <input type="email" name="user_email" className='mb-5 h-[70px] rounded-lg p-2 bg-slate-950'/>
             <label className='mb-1'>Message</label>
             <textarea name="message" className='h-full rounded-lg p-2 bg-slate-950'/>
             <div className='flex justify-center'>
-              <button type="submit" value="Send" className='border-4 rounded-xl px-10 py-2 font-bold hover:text-teal-300 hover:border-teal-300 mt-10'>Envoyer</button>
+              <button type="submit" value="Send" className='border-4 rounded-xl px-10 py-2 font-bold hover:text-teal-300 hover:border-teal-300 mt-10'>{t('sendbutton')}</button>
             </div>
           </form>
         </div>

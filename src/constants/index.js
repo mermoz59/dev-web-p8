@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import {
     kasa,
     ncarducci,
@@ -27,86 +29,6 @@ import {
     kasaproject,
     mvgproject
   } from "../assets";
-
-const experiences = [
-    {
-      title: "Développeur HTML & CSS",
-      company_name: "Booki",
-      icon: Booki,
-      iconBg: "#fff",
-      date: "Janvier. 2023",
-      points: [
-        "Prise en main de l'environnement de développement.",
-        "Developpement de la page d'accueil d'une agence de voyage avec HTML et CSS.",
-        "Respect du rendu visuel du projet en versions mobile, tablette et desktop.",
-        "Code valide auprès du W3C, respectant les règles Web sémantique.",
-      ],
-    },
-    {
-      title: "Développeur JavaScript",
-      company_name: "Sophie Bluel",
-      icon: sbluel,
-      iconBg: "#E6DEDD",
-      date: "Février. 2023",
-      points: [
-        "Développement d'une page web dynamique avec JavaScript.",
-        "Mise en place d'une page d'authentification pour l'administrateur du site.",
-        "Ajout de boutons pour trier les médias et implémentation d'une modale permettant d'en uploader des nouveaux.",
-        "Récupération des données via des appels à l'API.",
-      ],
-    },
-    {
-      title: "Développeur Web",
-      company_name: "Nina Carducci",
-      icon: ncarducci,
-      iconBg: "#fff",
-      date: "Mars. 2023",
-      points: [
-        "Débugguer et optimiser du site web du client à l'aide de WebPack 5.",
-        "Ajout des données afin d'ameliorer le réferencement local.",
-        "Rédaction d'un rapport d'intervention détaillant un avant/après des performances en se basant sur des audit Lighthouse, la liste des modifications et une liste des cas d'usage du site.",
-      ],
-    },
-    {
-      title: "Développeur React",
-      company_name: "Kasa",
-      icon: kasa,
-      iconBg: "#fff",
-      date: "Avril. 2023",
-      points: [
-        "Développement d'une application web de location immobilière avec React.",
-        "Création de l'arborescence du site et des différentes pages avec react-router.",
-        "Ajout de composant React réutilisable et dynamique avec pour certains une gestion des data.",
-        "Présentation du projet au CTO en justifiant et défendant les décisions techniques.",
-      ],
-    },
-    {
-        title: "Développeur React",
-        company_name: "Mon Vieux Grimoire",
-        icon: logomvg,
-        iconBg: "#F9F3EE",
-        date: "Mai. 2023",
-        points: [
-          "Développement du back-end d'un site de notation de livres.",
-          "Mise en place de la structure du code (contrôleurs, routeurs, etc.).",
-          "Sécurisation de la base de données et optimisation des images.",
-          "Création d'un système d'authentification à mail unique.",
-        ],
-      },
-      {
-        title: "Développeur Web",
-        company_name: "Webgencia",
-        icon: webgencia,
-        iconBg: "#fff",
-        date: "Juin. 2023",
-        points: [
-          "Planification du développement du site du client Qwenta.",
-          "Veille technologiques afin de déterminer les outils les plus adaptés aux besoin du client.",
-          "Présentation de l'outil de gestion de projet avec le déroulé précis du projet.",
-          "Travail en collaboration avec le client avec la mise en place d'un plan de communication.",
-        ],
-      },
-];
 
 const skills = [
   {
@@ -307,5 +229,19 @@ const projects = [
   },
 ];
 
-  export { experiences, skills, projects };
+
+const languages = [
+  {
+    code: 'fr',
+    name: 'Français',
+    country_code: 'fr'
+  },
+  {
+    code: 'en',
+    name: 'English',
+    country_code: 'gb'
+  }
+]
+
+  export { skills, projects, languages };
 
