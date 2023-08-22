@@ -124,7 +124,7 @@ const Works = () => {
         },
       ],
       image: mvgproject,
-      source_code_link: "https://github.com/mermoz59",
+      source_code_link: "https://mermoz59.github.io/dev-web-p7-frontend/",
     },
   ];
 
