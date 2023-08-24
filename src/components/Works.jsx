@@ -57,7 +57,7 @@ const Works = () => {
         },
       ],
       image: sophieproject,
-      source_code_link: "https://mermoz59.github.io/dev-web-p7-frontend/",
+      source_code_link: "https://mermoz59.github.io/dev-web-p3-frontend/",
     },
     {
       name: "Nina Carducci",
